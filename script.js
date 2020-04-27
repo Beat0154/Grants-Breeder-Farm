@@ -8,7 +8,7 @@ function resize(){
     var main = document.getElementById('main');
   if(window.innerWidth > 800){
     var myHeight = window.innerHeight;
-    var newHeight = myHeight - 129;
+    var newHeight = myHeight - 273;
     var newHeight = newHeight.toString().concat("px");
     main.style.height = newHeight;
   }else{
@@ -22,4 +22,12 @@ function copy(that){
     inp.select();
     document.execCommand('copy',false);
     inp.remove();
+}
+function toggleNav(){
+  var nav = document.getElementById("nav");
+  if(nav.style.display == "none"||nav.style.display == ""){
+    nav.style.display = "block";
+  }else{
+    nav.style.display = "none";
+  }
 }

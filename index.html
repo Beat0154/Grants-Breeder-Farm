@@ -9,12 +9,12 @@
 </head>
 <body onresize="resize()">
 <div class="everything">
-  <div class="header">
+  <div class="header" onclick="toggleNav()">
 <!--      <img src="img/grantbanner.png" alt="Grant's Breeder Farm Ltd">-->
       <h1>Grant's Breeder Farm Ltd.</h1>
       <p>Hatch Eggs, Table Eggs, Ready-to-Lay Pullets, Day old layers and broilers</p>
   </div>
-  <nav>
+  <nav id="nav">
       <ul>
           <li onclick="newView('home.html')">Home</li>
           <li onclick="newView('aboutus.html')">About Us</li>
@@ -39,7 +39,7 @@
 	});
   var main = document.getElementById('main');
   var myHeight = window.innerHeight;
-  var newHeight = myHeight - 129;
+  var newHeight = myHeight - 273;
   var newHeight = newHeight.toString().concat("px");
   main.style.height = newHeight;
 </script>

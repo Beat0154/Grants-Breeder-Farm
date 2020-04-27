@@ -9,6 +9,10 @@
 </head>
 <body>
 <div class="everything">
+  <div class="header">
+      <h1>Grant's Breeder Farm Ltd.</h1>
+      <p>Hatch Eggs, Table Eggs, Ready-to-Lay Pullets, Day old layers and broilers</p>
+  </div>
   <nav>
       <ul>
           <li onclick="newView('home.html')">Home</li>
@@ -24,6 +28,10 @@
        
    </div>
 </div>
-</body>
+</body><script type="text/javascript">
+	$.get("home.html", function(data){
+		document.getElementById("main").innerHTML = data;
+	});
+</script>
 <script src="script.js"></script>
 </html>

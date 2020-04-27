@@ -7,6 +7,19 @@
     font-family: sans-serif;
     margin: auto;
 }
+.header img{
+    position: relative;
+}
+.header{
+    background-image: url("img/grantbanner.png");
+    height: 200px;
+    color: white;
+}
+.header h1, .header p {
+    text-align: center;
+    padding: 1rem 1rem 0rem;
+    text-shadow: 0px 0px 10px black;
+}
 nav{
     width: 100%;
     background-color: lightblue;
@@ -26,5 +39,29 @@ nav ul li:hover{
 .mainimg{
     width:50%;
     margin: auto;
-    display: block
+    display: block;
+}
+
+
+
+footer{
+    width: 100%;
+    background-color: lightblue;
+}
+footer ul{
+    display: flex;
+/*    justify-content: space-between;*/
+    list-style: none;
+}
+footer ul li{
+    padding: 0.2rem 1rem;
+}
+footer ul li:hover{
+    background-color: blue;
+}
+
+@media only screen and (max-width: 800px){
+    #main{
+        height: 500px !important;
+    }
 }

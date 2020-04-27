@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 </head>
-<body>
+<body onresize="resize()">
 <div class="everything">
   <div class="header">
+<!--      <img src="img/grantbanner.png" alt="Grant's Breeder Farm Ltd">-->
       <h1>Grant's Breeder Farm Ltd.</h1>
       <p>Hatch Eggs, Table Eggs, Ready-to-Lay Pullets, Day old layers and broilers</p>
   </div>
@@ -19,19 +20,28 @@
           <li onclick="newView('aboutus.html')">About Us</li>
           <li onclick="newView('photogallery.html')">Photo Gallery</li>
           <li onclick="newView('contactus.html')">Contact Us</li>
-          <li onclick="newView('location.html')">Location</li>
-          <li onclick="newView('links.html')">Links</li>
-          <li onclick="newView('faq.html')">FAQ</li>
       </ul>
   </nav>
    <div id="main">
        
    </div>
+   <footer>
+         <ul>
+          <li onclick="newView('location.html')">Location</li>
+          <li onclick="newView('links.html')">Links</li>
+          <li onclick="newView('faq.html')">FAQ</li>
+         </ul>
+   </footer>
 </div>
 </body><script type="text/javascript">
 	$.get("home.html", function(data){
 		document.getElementById("main").innerHTML = data;
 	});
+  var main = document.getElementById('main');
+  var myHeight = window.innerHeight;
+  var newHeight = myHeight - 129;
+  var newHeight = newHeight.toString().concat("px");
+  main.style.height = newHeight;
 </script>
 <script src="script.js"></script>
 </html>

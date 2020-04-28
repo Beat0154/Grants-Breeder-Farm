@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 .everything{
     max-width: 1000px;
-    font-family: sans-serif;
+    font-family: "Fjalla One", sans-serif;
     margin: auto;
 }
 .header img{
@@ -22,7 +24,7 @@
 }
 nav{
     width: 100%;
-    background-color: lightblue;
+    background-color: hsl(200, 50%, 80%);
 }
 nav ul{
     display: flex;
@@ -33,7 +35,7 @@ nav ul li{
     padding: 1rem;
 }
 nav ul li:hover{
-    background-color: blue;
+    background-color: hsl(200, 50%, 50%);
 }
 
 .mainimg{
@@ -44,6 +46,47 @@ nav ul li:hover{
 #main{
     overflow: scroll;
 }
+
+#navToggle{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#navToggle span
+{
+  display: none;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #FFFFFF;
+  border-radius: 3px;
+/*
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+*/
+}
+
+#navToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#navToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+h2{
+    text-align: center;
+}
+
 
 /*ABOUT PAGE*/
 .aboutdivs{
@@ -70,15 +113,16 @@ form{
     margin: auto;
 }
 form input, form select, form textarea{
-    margin-top:0.5rem;
+    margin:0.5rem auto 0rem;
+    display: block;
     padding: 0.5rem;
     font-size: 1.3rem;
-    width: 100%;
+    width: 90%;
 }
 form textarea{
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
     height: 100px;
     min-height: 50px;
     max-height: 400px;
@@ -87,10 +131,6 @@ form textarea{
 
 footer{
     width: 100%;
-/*
-    position: fixed;
-    bottom:0;
-*/
     background-color: lightblue;
 }
 footer ul{
@@ -107,7 +147,17 @@ footer ul li:hover{
 
 @media only screen and (max-width: 800px){
     #main{
-        min-height: 500px !important;
+/*        min-height: 500px !important;*/
+        padding: 1rem;
+        overflow: visible;
+        height: auto;
+        position: relative;
+    }
+    .header{
+        height: 100px !important;
+    }
+    nav{
+        display: none;
     }
     nav ul{
         display: block;
@@ -120,11 +170,24 @@ footer ul li:hover{
     }
     .aboutdiv{
         width: 100%;
+        height: auto;
     }
     form{
         width: 90%;
     }
     footer{
-        
+        width: 100%;
+        position: relative;
+    } 
+    footer ul{
+        display: block;
+    }
+    footer ul li{
+        padding: 1rem 0rem;
+        text-align: center;
+        width: 100%;
+    }
+    #navToggle span{
+        display: block;
     }
 }

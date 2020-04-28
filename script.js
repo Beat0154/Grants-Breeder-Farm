@@ -8,7 +8,7 @@ function resize(){
     var main = document.getElementById('main');
   if(window.innerWidth > 800){
     var myHeight = window.innerHeight;
-    var newHeight = myHeight - 273;
+    var newHeight = myHeight - 277;
     var newHeight = newHeight.toString().concat("px");
     main.style.height = newHeight;
   }else{

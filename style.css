@@ -1,19 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 *{
+	scrollbar-width: none;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
+.link{
+    text-decoration: underline;
+}
 .link:hover{
     color: lightgray;
     cursor: pointer;
+    text-decoration: underline;
 }
 body{
     background-image: url("https://www.transparenttextures.com/patterns/p6.png");
 }
+/*
+a{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: darkgray;
+}
+*/
+#main p:last-child{
+    padding-bottom: 5rem;
+}
 #main{
-    background-color: #e6dc98;
-    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+/*    background-color: #e6dc98;*/
+/*    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");*/
 }
 .everything{
     max-width: 1000px;
@@ -28,7 +50,13 @@ body{
     height: 200px;
     color: white;
 }
-.header h1, .header p {
+.header h1{
+    margin-top: 4rem;
+    text-align: center;
+    padding: 1rem 1rem 0rem;
+    text-shadow: 0px 0px 10px black;
+}
+.header p {
     text-align: center;
     padding: 1rem 1rem 0rem;
     text-shadow: 0px 0px 10px black;
@@ -139,6 +167,11 @@ form input, form select, form textarea{
     padding: 0.5rem;
     font-size: 1.3rem;
     width: 90%;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+}
+form select{
+    width: 95%;
 }
 form textarea{
     width: 90%;
@@ -151,6 +184,20 @@ form textarea{
 .submit{
     width: auto !important;
     padding: 1rem 2rem;
+    margin-bottom: 5rem;
+}
+.submit:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.label{
+    margin-left: 1rem;
+    transform: translateY(0.3rem);
+}
+.contactp{
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /*FAQ*/
@@ -158,11 +205,40 @@ form textarea{
     width: 80%;
     margin: 2rem auto;
 }
+/*LOCATION*/
+.copy{
+    border: 1px solid black;
+    padding: 1rem;
+    width: 26%;
+    margin: 0rem auto 1rem;
+}
+.copyimg{
+    width: 16px;
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+/*LINKS*/
+.linkdiv{
+    width: 40%;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+.linkdiv a{
+    font-size: 1.6rem;
+    color: black;
+}
+.linkdiv a:hover{
+    color: darkgray;
+    cursor: pointer;
+}
+.linkspan{
+    text-decoration: none !important;
+}
 
 
 footer{
     width: 100%;
-    background-color: lightblue;
+    background-color: hsl(200, 50%, 80%);
 }
 footer ul{
     display: flex;
@@ -173,10 +249,10 @@ footer ul li{
     padding: 0.2rem 1rem;
 }
 footer ul li:hover{
-    background-color: blue;
+    background-color: hsl(200, 50%, 50%);
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
     #main{
         min-height: 500px !important;
         padding: 1rem;
@@ -186,6 +262,19 @@ footer ul li:hover{
     }
     .header{
         height: 100px !important;
+    }
+    .header h1{
+        margin-top: 0rem;
+        text-align: left;
+        font-size: 1.6rem;
+        padding: 0.5rem 0.5rem 0rem;
+        text-shadow: 0px 0px 10px black;
+    }
+    .header p {
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0.5rem 0.5rem 0rem;
+        text-shadow: 0px 0px 10px black;
     }
     nav{
         display: none;
@@ -229,5 +318,14 @@ footer ul li:hover{
     .faq{
         width: 100%;
         margin: 2rem auto;
+    }
+    .copy{
+        border: 1px solid black;
+        padding: 0.5rem;
+        width: 80%;
+        margin: 0rem auto 1rem;
+    }
+    .linkdiv{
+        width: 90%;
     }
 }

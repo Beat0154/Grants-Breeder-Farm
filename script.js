@@ -6,7 +6,7 @@ function newView(file,value){
 }
 function resize(){
     var main = document.getElementById('main');
-  if(window.innerWidth > 800){
+  if(window.innerWidth > 1000){
     var myHeight = window.innerHeight;
     var newHeight = myHeight - 277;
     var newHeight = newHeight.toString().concat("px");

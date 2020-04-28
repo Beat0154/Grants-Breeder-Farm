@@ -47,6 +47,7 @@ a:hover{
 }
 .header{
     background-image: url("img/grantbanner.png");
+    background-size: cover;
     height: 200px;
     color: white;
 }
@@ -75,6 +76,7 @@ nav ul li{
 }
 nav ul li:hover{
     background-color: hsl(200, 50%, 50%);
+    cursor: pointer;
 }
 
 .mainimg{
@@ -255,6 +257,7 @@ form textarea{
 .photogallery li:hover{
     color: hsl(200, 50%, 80%);
     background-color: black;
+    cursor: pointer;
 }
 
 #mainpic{

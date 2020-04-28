@@ -4,6 +4,17 @@
     padding: 0;
     overflow-x: hidden;
 }
+.link:hover{
+    color: lightgray;
+    cursor: pointer;
+}
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+}
+#main{
+    background-color: #e6dc98;
+    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+}
 .everything{
     max-width: 1000px;
     font-family: "Fjalla One", sans-serif;
@@ -85,6 +96,7 @@ nav ul li:hover{
 }
 h2{
     text-align: center;
+    padding: 0.5rem;
 }
 
 
@@ -97,15 +109,24 @@ h2{
 }
 .aboutdiv{
     width: 50%;
-    height: 350px;
+    height: auto;
 }
 .aboutimg{
-    margin: auto;
+    margin: 1rem auto;
     display: block;
+    border-radius: 0.3rem;
 }
 .aboutdiv p{
     text-align: justify;
+    margin: auto;
+    width: 70%;
 }
+.aboutp{
+    width: 80%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
 
 /*CONTACT US*/
 form{
@@ -127,6 +148,16 @@ form textarea{
     min-height: 50px;
     max-height: 400px;
 }
+.submit{
+    width: auto !important;
+    padding: 1rem 2rem;
+}
+
+/*FAQ*/
+.faq{
+    width: 80%;
+    margin: 2rem auto;
+}
 
 
 footer{
@@ -147,11 +178,8 @@ footer ul li:hover{
 
 @media only screen and (max-width: 800px){
     #main{
-/*        min-height: 500px !important;*/
+        min-height: 500px !important;
         padding: 1rem;
-        overflow: visible;
-        height: auto;
-        position: relative;
     }
     .mainimg{
         width: 90%;
@@ -173,7 +201,6 @@ footer ul li:hover{
     }
     .aboutdiv{
         width: 100%;
-        height: auto;
     }
     form{
         width: 90%;
@@ -192,5 +219,15 @@ footer ul li:hover{
     }
     #navToggle span{
         display: block;
+    }
+    .aboutdiv p{
+        width: 90%;
+    }
+    .aboutp{
+        width: 90%;
+    }
+    .faq{
+        width: 100%;
+        margin: 2rem auto;
     }
 }

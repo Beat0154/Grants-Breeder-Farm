@@ -235,6 +235,42 @@ form textarea{
     text-decoration: none !important;
 }
 
+/*PHOTOS*/
+.photogallery{
+    width: 200px;
+    margin: auto;
+}
+.photogallery li{
+    border-top: 1px solid hsl(200, 50%, 50%);
+}
+.photogallery li:first-child{
+    border-top: none;
+}
+.photogallery li{
+    background-color: hsl(200, 50%, 80%);
+    margin: auto;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.photogallery li:hover{
+    color: hsl(200, 50%, 80%);
+    background-color: black;
+}
+
+#mainpic{
+    width: 515px;
+    margin: auto;
+    display: block;
+}
+.images{
+    margin: 1rem auto 5rem;
+    display: block;
+    width: 515px;
+}
+.images img{
+    width: 100px;
+}
+
 
 footer{
     width: 100%;
@@ -327,5 +363,11 @@ footer ul li:hover{
     }
     .linkdiv{
         width: 90%;
+    }
+    #mainpic{
+        width: 100%;
+    }
+    .images{
+        width: auto;
     }
 }

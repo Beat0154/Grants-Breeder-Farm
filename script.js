@@ -31,3 +31,7 @@ function toggleNav(){
     nav.style.display = "none";
   }
 }
+function changePic(string){
+  var mainpic = document.getElementById("mainpic");
+  mainpic.src = string;
+}

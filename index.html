@@ -42,11 +42,14 @@
 	$.get("home.html", function(data){
 		document.getElementById("main").innerHTML = data;
 	});
-  var main = document.getElementById('main');
-  var myHeight = window.innerHeight;
-  var newHeight = myHeight - 277;
-  var newHeight = newHeight.toString().concat("px");
-  main.style.height = newHeight;
+  if(window.innerWidth > 800){
+    var myHeight = window.innerHeight;
+    var newHeight = myHeight - 277;
+    var newHeight = newHeight.toString().concat("px");
+    main.style.height = newHeight;
+  }else{
+    main.style.height = "auto";
+  }
 </script>
 <script src="script.js"></script>
 </html>

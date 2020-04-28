@@ -153,6 +153,9 @@ footer ul li:hover{
         height: auto;
         position: relative;
     }
+    .mainimg{
+        width: 90%;
+    }
     .header{
         height: 100px !important;
     }
